@@ -1,0 +1,32 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+import Layout from "@/layouts/layout/index.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import Benchmarking from "@/components/benchmarking/index.astro"
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/index.astro"
+import HeaderBanner from "@/components/common/header-banner/index.astro"
+
+// IMPORTS BENCHMARKING FROM MDX
+import { frontmatter as benchmarking } from "@/content/benchmarking/home.mdx"
+
+---
+<Layout
+	description={ "Benchmarking" }
+	image=""
+	title={ "Benchmarking" }
+>
+    <HeaderBanner />
+    <Header />
+    <section class="py-40">
+        <Container>
+            <Benchmarking
+                data={ benchmarking }
+            />
+        </Container>
+    </section>
+    <Footer />
+</Layout>
