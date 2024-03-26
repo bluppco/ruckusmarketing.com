@@ -1,15 +1,31 @@
 {
-  "name": "ruckusmarketing.com",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^4.5.9"
-  }
+	"name": "ruckusmarketing.com",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^9.2.0",
+		"@astrojs/mdx": "^2.2.1",
+		"@astrojs/react": "^3.1.0",
+		"@astrojs/tailwind": "^5.1.0",
+		"@radix-ui/react-icons": "^1.3.0",
+		"@types/react": "^18.2.48",
+		"@types/react-dom": "^18.2.18",
+		"astro": "^4.5.9",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.0",
+		"framer-motion": "^11.0.14",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-scroll": "^1.9.0",
+		"tailwind-merge": "^2.2.1",
+		"tailwindcss": "^3.4.1",
+		"tailwindcss-animate": "^1.0.7"
+	}
 }

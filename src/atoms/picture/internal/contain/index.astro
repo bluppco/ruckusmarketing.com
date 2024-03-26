@@ -1,0 +1,20 @@
+---
+
+// ASTRO PROPS
+const {
+
+    alternative_text,
+    source
+
+} = Astro.props
+
+---
+<picture class="w-full h-full">
+    <source media="(max-width: 375px)" srcset={ source } />
+    <source media="(max-width: 640px)" srcset={  source } />
+    <img
+        alt={ alternative_text }
+        class="w-full h-full object-contain"
+        src={ source }
+    />
+</picture>
