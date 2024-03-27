@@ -47,6 +47,7 @@ module.exports = {
 			},
 			colors: {
 
+				"rm_orange": "#ff8300"
 
 			},
 			fontFamily: {

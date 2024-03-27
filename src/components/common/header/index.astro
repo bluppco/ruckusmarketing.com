@@ -1,13 +1,17 @@
 ---
 
-// IMPORTS ASTRO LAYOUTS
-import Container from "@/layouts/container/index.astro"
+// IMPORTS JSX COMPONENTS
+import Header from "@/components/common/header/jsx/index.jsx"
+
+// IMPORTS ASTRO COLLECTION
+import { getCollection } from "astro:content"
+
+// IMPORTS HEADER COLLECTION
+let header_data = await getCollection("header")
+header_data = header_data.sort((a, b) => a.data.order - b.data.order)
 
 ---
-<header class="bg-black h-12">
-    <Container>
-        <section class="flex items-center h-full">
-            <p class="text-white">I am header</p>
-        </section>
-    </Container>
-</header>
+<Header
+    client:load
+    data={ header_data }
+/>
