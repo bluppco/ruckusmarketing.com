@@ -48,7 +48,8 @@ module.exports = {
 			colors: {
 
 				"rm_orange": "#ff8300",
-				"rm_black": "#292929"
+				"rm_black": "#292929",
+				"rm_gray": "#adadad"
 
 			},
 			fontFamily: {

@@ -1,0 +1,64 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from '@/layouts/container/index.astro'
+
+// IMPORTS ASTRO ATOMS
+import ButtonArrow from "@/atoms/button/arrow/index.astro"
+import Link from '@/atoms/link/index.astro'
+import PictureInternal from "@/atoms/picture/internal/contain/index.astro"
+
+const data = {
+
+    title: "Featured Clients",
+    button_text: "View All Work",
+    button_link: "/work"
+
+}
+
+const clients = Array(8).fill({
+
+    category: "Children’s Toys",
+    cover: "/hardcoded/crayola.png",
+    link: "/work/brians-dots-crayola"
+
+})
+
+---
+<Container>
+    <section class="space-y-10 pb-20">
+        <h2 class="font-futura_pt font-light text-rm_orange text-5xl">{ data.title }</h2>
+        <div class="grid grid-cols-4 gap-x-8">
+            {
+
+                clients.map( ( value ) => {
+
+                    return(
+                        <div class="border-t border-rm_orange">
+                            <div class="grayscale hover:grayscale-0 flex flex-col items-center justify-center gap-4 py-12">
+                                <Link href={ value.link } aria_label="">
+                                    <div class="h-24 w-full">
+                                        <PictureInternal
+                                            alternative_text=""
+                                            source={ value.cover }
+                                        />
+                                    </div>
+                                </Link>
+                                <Link href={ value.link } aria_label={ value.category }>
+                                    <span class="text-rm_orange uppercase font-benton_sans">{ value.category }</span>
+                                </Link>
+                            </div>
+                        </div>
+                    )
+
+                })
+
+            }
+        </div>
+        <div class="flex justify-end">
+            <Link href={ data.button_link } aria_label={ data.button_text }>
+                <ButtonArrow>{ data.button_text }</ButtonArrow>
+            </Link>
+        </div>
+    </section>
+</Container>
