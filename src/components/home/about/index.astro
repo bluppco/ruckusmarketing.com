@@ -1,0 +1,41 @@
+---
+
+// IMPORTS ASTRO LAYOUTS
+import Container from '@/layouts/container/index.astro'
+
+// IMPORTS ASTRO ATOMS
+import ButtonArrow from "@/atoms/button/arrow/index.astro"
+import Link from '@/atoms/link/index.astro'
+import ParagraphXl from "@/atoms/paragraph/xl/index.astro"
+import Picture from "@/atoms/picture/internal/index.astro"
+
+const data = {
+
+    title: "For fifteen years, Ruckus has been delivering work that powers game-changing companies and global influencers.",
+    description: "Our core strategic engagements in branding, platform design, campaigns, and content creation consistently drive desired outcomes and awareness.",
+    button_text: "See Who We Are",
+    button_link: "/about-us",
+    cover: "/hardcoded/about-cover.svg"
+
+}
+
+---
+<Container>
+    <section class="grid grid-cols-2 gap-14 py-20">
+        <section class="flex flex-col gap-12 justify-center">
+            <h2 class="font-futura_pt font-light text-5xl text-rm_black">{ data.title }</h2>
+            <ParagraphXl>{ data.description }</ParagraphXl>
+            <Link href={ data.button_link } aria_label={ data.button_text }>
+                <ButtonArrow>{ data.button_text }</ButtonArrow>
+            </Link>
+        </section>
+        <section class="flex justify-end">
+            <div class="size-[480px] bg-zinc-200">
+                <Picture
+                    alternative_text=""
+                    source={ data.cover }
+                />
+            </div>
+        </section>
+    </section>
+</Container>
