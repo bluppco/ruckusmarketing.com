@@ -1,0 +1,17 @@
+---
+
+// GET ASTRO PROPS
+const { cy } = Astro.props
+
+---
+<video
+    autoplay={ true }
+    class="h-full w-full object-cover"
+    data-cy={ cy }
+    loop={ true }
+    muted={ true }
+    playsinline={ true }
+    preload="auto"
+>
+    <slot/>
+</video>
