@@ -49,7 +49,9 @@ module.exports = {
 
 				"rm_orange": "#ff8300",
 				"rm_black": "#292929",
-				"rm_gray": "#adadad"
+				"rm_gray": "#adadad",
+				"rm_charcoal_black": "#172121",
+				"rm_slate": "#bfbaba"
 
 			},
 			fontFamily: {

@@ -1,0 +1,25 @@
+---
+
+import ContactFormJSX from "@/components/home/contact/form/index.jsx"
+
+
+const data = {
+
+    cover: "/hardcoded/contact-banner.png",
+    title: "Let's chat over a brew.",
+    description: "Coffee, tea, or something stronger...",
+    button_text: "Get our attention"
+
+}
+
+---
+<section class="h-[720px] bg-no-repeat bg-cover flex justify-end" style=`background-image: url(${ data.cover + "?quality=80" })`>
+    <div class="flex flex-col justify-end">
+        <ContactFormJSX
+            button_text={ data.button_text }
+            client:load
+            description={ data.description }
+            title={ data.title }
+        />
+    </div>
+</section>
