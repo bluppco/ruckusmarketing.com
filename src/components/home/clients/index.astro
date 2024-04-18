@@ -16,13 +16,64 @@ const data = {
 
 }
 
-const clients = Array(8).fill({
+const clients = [
+    {
 
-    category: "Children’s Toys",
-    cover: "/hardcoded/crayola.png",
-    link: "/work/brians-dots-crayola"
+        category: "Beauty / Skincare",
+        cover: "/hardcoded/beekman.png",
+        link: "/work/beekman-1802"
 
-})
+    },
+    {
+
+        category: "Automotive",
+        cover: "/hardcoded/bmw.png",
+        link: "/work/bmw"
+
+    },
+    {
+
+        category: "Beauty / Skincare",
+        cover: "/hardcoded/murad.png",
+        link: "/work/murad-skincare"
+
+    },
+    {
+
+        category: "Government",
+        cover: "/hardcoded/nyc-ferry.png",
+        link: "/work/nyc-ferry"
+
+    },
+    {
+
+        category: "Beauty / Skincare",
+        cover: "/hardcoded/tweezer.png",
+        link: "/work/tweezerman"
+
+    },
+    {
+
+        category: "Children’s Toys",
+        cover: "/hardcoded/crayola.png",
+        link: "/work/brians-dots-crayola"
+
+    },
+    {
+
+        category: "Automotive",
+        cover: "/hardcoded/mobileye.png",
+        link: "/work"
+
+    },
+    {
+
+        category: "Retail",
+        cover: "/hardcoded/petvalu.png",
+        link: "/work/petvalu"
+
+    },
+]
 
 ---
 <Container>
@@ -45,7 +96,7 @@ const clients = Array(8).fill({
                                     </div>
                                 </Link>
                                 <Link href={ value.link } aria_label={ value.category }>
-                                    <span class="text-rm_orange uppercase font-benton_sans">{ value.category }</span>
+                                    <span class="text-rm_orange uppercase font-benton_sans font-light">{ value.category }</span>
                                 </Link>
                             </div>
                         </div>
