@@ -102,7 +102,7 @@ const ContactFormJSX = ( props ) => {
 
     return (
 
-        <div className="w-[640px] h-fit bg-white p-16 space-y-4">
+        <div className="w-[640px] h-fit bg-white p-16 space-y-4" key="">
             <h2 className="text-5xl font-futura_pt font-bold text-rm_black">{ title }</h2>
             <p className="text-2xl font-futura_pt text-rm_black">{ description }</p>
             <div className="space-y-4 py-8">

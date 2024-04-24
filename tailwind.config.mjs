@@ -56,6 +56,7 @@ module.exports = {
 			},
 			fontFamily: {
 
+				"futura_pt": [ "futura-pt", "sans-serif" ]
 
 			},
 			screens: {
