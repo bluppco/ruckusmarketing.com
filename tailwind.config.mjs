@@ -56,7 +56,8 @@ module.exports = {
 			},
 			fontFamily: {
 
-				"futura_pt": [ "futura-pt", "sans-serif" ]
+				"futura_pt": [ "futura-pt", "sans-serif" ],
+				"benton_sans": [ "BentonSans Comp Regular", "sans-serif" ]
 
 			},
 			screens: {

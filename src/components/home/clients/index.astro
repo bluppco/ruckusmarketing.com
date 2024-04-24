@@ -77,9 +77,10 @@ const clients = [
 
 ---
 <Container>
-    <section class="space-y-10 pb-20">
-        <h2 class="font-futura_pt font-light text-rm_orange text-5xl">{ data.title }</h2>
-        <div class="grid grid-cols-4 gap-x-8">
+    <section class="pb-20">
+        <span class="font-futura_pt font-light text-rm_orange text-5xl">Featured </span>
+        <span class="font-futura_pt font-semibold text-rm_orange text-5xl"> Clients</span>
+        <div class="grid grid-cols-4 gap-x-8 pt-16">
             {
 
                 clients.map( ( value ) => {
@@ -88,7 +89,7 @@ const clients = [
                         <div class="border-t border-rm_orange">
                             <div class="grayscale hover:grayscale-0 flex flex-col items-center justify-center gap-4 py-12">
                                 <Link href={ value.link } aria_label="">
-                                    <div class="h-24 w-full">
+                                    <div class="h-28 w-full">
                                         <PictureInternal
                                             alternative_text=""
                                             source={ value.cover }
@@ -106,7 +107,7 @@ const clients = [
 
             }
         </div>
-        <div class="flex justify-end">
+        <div class="flex justify-end pt-2">
             <Link href={ data.button_link } aria_label={ data.button_text }>
                 <ButtonArrow>{ data.button_text }</ButtonArrow>
             </Link>
