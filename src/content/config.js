@@ -42,7 +42,8 @@ const footerColumnFourCollection = defineCollection({
 
 		live: z.boolean(),
 		order: z.number(),
-		title: z.string(),
+		alternative_text: z.string(),
+		source: z.string(),
         link: z.string().optional(),
 
 	})

@@ -1,0 +1,24 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/link/index.astro"
+
+// GET ASTRO PROPS
+const { data } = Astro.props
+
+---
+<section class="flex gap-4">
+    {
+
+        data.map( ( value ) => {
+
+            return(
+                <Link aria_label="" href={ value.data.link }>
+                    <span class="font-futura_pt text-lg text-rm_charcoal_black">{ value.data.title }</span>
+                </Link>
+            )
+
+        })
+
+    }
+</section>

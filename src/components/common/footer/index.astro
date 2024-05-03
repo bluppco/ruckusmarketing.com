@@ -3,11 +3,60 @@
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/container/index.astro"
 
----
-<footer class="py-4">
-    <Container>
-        <section>
+// IMPORTS COLLECTION FROM ASTRO
+import { getCollection } from 'astro:content'
 
+// IMPORTS FOOTER COLUMN ONE COLLECTION
+let footer_column_one = await getCollection('footer-column-one')
+footer_column_one = footer_column_one.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS FOOTER COLUMN TWO COLLECTION
+let footer_column_two = await getCollection('footer-column-two')
+footer_column_two = footer_column_two.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS FOOTER COLUMN THREE COLLECTION
+let footer_column_three = await getCollection('footer-column-three')
+footer_column_three = footer_column_three.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS FOOTER COLUMN FOUR COLLECTION
+let footer_column_four = await getCollection('footer-column-four')
+footer_column_four = footer_column_four.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS FOOTER COLUMN FIVE COLLECTION
+let footer_column_five = await getCollection('footer-column-five')
+footer_column_five = footer_column_five.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORTS ASTRO COMPONENTS
+import FooterColumnFive from "@/components/common/footer/footer-column-five/index.astro"
+import FooterColumnFour from "@/components/common/footer/footer-column-four/index.astro"
+import FooterColumnOne from "@/components/common/footer/footer-column-one/index.astro"
+import FooterColumnThree from "@/components/common/footer/footer-column-three/index.astro"
+import FooterColumnTwo from "@/components/common/footer/footer-column-two/index.astro"
+
+---
+<footer class="pt-20 pb-12">
+    <Container>
+        <span class="text-4xl font-futura_pt font-semibold">Got a Project? </span>
+        <span class="text-4xl font-futura_pt font-light">Tell us everything.</span>
+        <section class="flex justify-between gap-4 pt-4">
+            <FooterColumnOne
+                data={ footer_column_one }
+            />
+            <FooterColumnTwo
+                data={ footer_column_two }
+            />
+        </section>
+        <hr class="h-[px] mt-10 mb-6" />
+        <section class="flex justify-between gap-4">
+            <FooterColumnThree
+                data={ footer_column_three }
+            />
+            <FooterColumnFour
+                data={ footer_column_four }
+            />
+            <FooterColumnFive
+                data={ footer_column_five }
+            />
         </section>
     </Container>
 </footer>

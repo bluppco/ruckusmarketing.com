@@ -1,0 +1,27 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import LinkNewWindow from "@/atoms/link/target-blank/index.astro"
+
+// GET ASTRO PROPS
+const { data } = Astro.props
+
+---
+<section>
+    {
+
+        data.map( ( value ) => {
+
+            return(
+                <div class="flex gap-1">
+                    <span class="font-futura_pt font-semibold text-lg">HQ - </span>
+                    <LinkNewWindow aria_label="" href={ value.data.link }>
+                        <span class="font-futura_pt text-lg text-rm_charcoal_black">{ value.data.title }</span>
+                    </LinkNewWindow>
+                </div>
+            )
+
+        })
+
+    }
+</section>

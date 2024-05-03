@@ -1,0 +1,30 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import LinkNewWindow from "@/atoms/link/target-blank/index.astro"
+import PictureInternalContain from "@/atoms/picture/internal/contain/index.astro"
+
+// GET ASTRO PROPS
+const { data } = Astro.props
+
+---
+<section class="flex gap-4 items-center">
+    {
+
+        data.map( ( value ) => {
+
+            return(
+                <LinkNewWindow aria_label="" href={ value.data.link }>
+                    <div class={ value.data.order === 2 ? "size-4" : "size-5" }>
+                        <PictureInternalContain
+                            alternative_text=""
+                            source={ value.data.source }
+                        />
+                    </div>
+                </LinkNewWindow>
+            )
+
+        })
+
+    }
+</section>

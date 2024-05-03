@@ -1,0 +1,24 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import Link from "@/atoms/link/index.astro"
+
+// GET ASTRO PROPS
+const { data } = Astro.props
+
+---
+<section>
+    {
+
+        data.map( ( value ) => {
+
+            return(
+                <Link aria_label="" href={ value.data.link }>
+                    <span class="text-rm_orange text-3xl font-futura_pt">{ value.data.title }</span>
+                </Link>
+            )
+
+        })
+
+    }
+</section>
