@@ -38,7 +38,7 @@ const Header = ( props ) => {
     const squareVariants = {
 
         display: { y: 0, transition: { duration: .2 } },
-        hide: { y: "-100%", transition: { duration: .4 } },
+        hide: { y: "-200%", transition: { duration: .4 } },
 
     }
     const controls = useAnimation( scrollY )

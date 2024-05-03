@@ -102,14 +102,14 @@ const ContactFormJSX = ( props ) => {
 
     return (
 
-        <div className="w-[640px] h-fit bg-white p-16 space-y-4" key="">
+        <div className="w-[640px] h-fit bg-white px-16 py-10 space-y-4 border-t-8 border-t-rm_orange" key="">
             <h2 className="text-5xl font-futura_pt font-bold text-rm_black">{ title }</h2>
             <p className="text-2xl font-futura_pt text-rm_black">{ description }</p>
-            <div className="space-y-4 py-8">
+            <div className="space-y-5 py-4">
                 <div>
                     <span className="font-futura_pt text-rm_charcoal_black uppercase">Name<sup>*</sup></span>
                     <input
-                        className="h-10 w-full border border-rm_slate rounded px-2.5 text-sm mt-1"
+                        className="h-10 w-full border border-rm_slate px-2.5 mt-1 font-futura_pt font-light placeholder:text-rm_charcoal_black/70"
                         name="name"
                         onChange={ ( event ) => onChangeValue( event ) }
                         placeholder="How should we address you?"
@@ -120,7 +120,7 @@ const ContactFormJSX = ( props ) => {
                 <div>
                     <span className="font-futura_pt text-rm_charcoal_black uppercase">Email<sup>*</sup></span>
                     <input
-                        className="h-10 w-full border border-rm_slate rounded px-2.5 text-sm mt-1"
+                        className="h-10 w-full border border-rm_slate px-2.5 mt-1 font-futura_pt font-light placeholder:text-rm_charcoal_black/70"
                         name="email"
                         onChange={ ( event ) => onChangeValue( event ) }
                         placeholder="Let's start a chain."
@@ -131,7 +131,7 @@ const ContactFormJSX = ( props ) => {
                 <div>
                     <span className="font-futura_pt text-rm_charcoal_black uppercase">Phone</span>
                     <input
-                        className="h-10 w-full border border-rm_slate rounded px-2.5 text-sm mt-1"
+                        className="h-10 w-full border border-rm_slate px-2.5 mt-1 font-futura_pt font-light placeholder:text-rm_charcoal_black/70"
                         name="phone"
                         onChange={ ( event ) => onChangeValue( event ) }
                         placeholder="So nothing gets lost in translation."
@@ -142,7 +142,7 @@ const ContactFormJSX = ( props ) => {
                 <div>
                     <span className="font-futura_pt text-rm_charcoal_black uppercase">Comment</span>
                     <input
-                        className="h-10 w-full border border-rm_slate rounded px-2.5 text-sm mt-1"
+                        className="h-10 w-full border border-rm_slate px-2.5 mt-1 font-futura_pt font-light placeholder:text-rm_charcoal_black/70"
                         name="comment"
                         onChange={ ( event ) => onChangeValue( event ) }
                         placeholder="Disruption starts here. How can we help?"
@@ -168,7 +168,7 @@ const ContactFormJSX = ( props ) => {
 
                     !state.processing &&
                     <div className="flex justify-end">
-                    <button className="text-xl text-rm_orange uppercase font-benton_sans font-bold flex items-center gap-2" onClick={ () => triggerFormPOST( state ) }>
+                    <button className="text-xl text-rm_orange uppercase font-futura_pt font-semibold flex items-center gap-2" onClick={ () => triggerFormPOST( state ) }>
                         { button_text }
                         <img
                             alt="orange arrow icon"
