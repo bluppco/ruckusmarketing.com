@@ -5,7 +5,7 @@ const VideoJSX = ( props ) => {
 
     return(
         <video
-            autoplay={ true }
+            autoPlay={ true }
             className="h-full w-full object-cover"
             data-cy={ cy }
             loop={ true }
