@@ -1,37 +1,23 @@
 ---
 
-// IMPORTS ASTRO LAYOUTS
-import Container from "@/layouts/container/index.astro"
+// IMPORTS JSX COMPONENTS
+import HeroCarouselJSX from "@/components/home/hero/carousel/index.jsx"
 
-// IMPORTS ASTRO ATOMS
-import ButtonArrow from "@/atoms/button/arrow/index.astro"
-import Link from '@/atoms/link/index.astro'
-import Video from "@/atoms/video/index.astro"
+// HARDCODED DATA
+const data = Array(4).fill({
 
-const data = {
-
-    video_source: "/hardcoded/hero.mp4",
-    title: "MOBILEYE CES  Disruption",
-    description: "The Mobileye exhibition by Ruckus took CES by storm, garnering international attention.",
+    button_link: "/work/mobileye",
     button_text: "See What We Did",
-    button_link: "/work/mobileye"
+    description: "The Mobileye exhibition by Ruckus took CES by storm, garnering international attention.",
+    title: "MOBILEYE CES  Disruption",
+    video_source: "/hardcoded/hero.mp4",
 
-}
+})
 
 ---
 <section class="h-full w-full relative">
-    <Video>
-        <source src={ data.video_source } type="video/mp4" />
-    </Video>
-    <Container>
-        <div class="absolute bottom-40 space-y-8">
-            <h2 class="font-futura_pt font-light uppercase text-white text-6xl">{ data.title }</h2>
-            <div class="w-[60%]">
-                <p class="font-futura_pt text-white text-2xl">{ data.description }</p>
-            </div>
-            <Link href={ data.button_link } aria_label={ data.button_text }>
-                <ButtonArrow>{ data.button_text }</ButtonArrow>
-            </Link>
-        </div>
-    </Container>
+    <HeroCarouselJSX
+        client:load
+        data={ data }
+    />
 </section>
